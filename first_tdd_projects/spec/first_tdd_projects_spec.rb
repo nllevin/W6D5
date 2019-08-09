@@ -148,21 +148,23 @@ describe "TowersOfHanoi" do
 
   describe "#won?" do
     it "returns true when all discs are on the third tower" do
-      game.move(1,2)
-      game.move(1,3)
-      game.move(2,3)
-      game.move(1,2)
-      game.move(3,1)
-      game.move(3,2)
-      game.move(1,2)
-      game.move(1,3)
-      game.move(2,3)
-      game.move(2,1)
-      game.move(3,1)
-      game.move(2,3)
-      game.move(1,2)
-      game.move(1,3)
-      game.move(2,3)
+      # game.move(1,2)
+      # game.move(1,3)
+      # game.move(2,3)
+      # game.move(1,2)
+      # game.move(3,1)
+      # game.move(3,2)
+      # game.move(1,2)
+      # game.move(1,3)
+      # game.move(2,3)
+      # game.move(2,1)
+      # game.move(3,1)
+      # game.move(2,3)
+      # game.move(1,2)
+      # game.move(1,3)
+      # game.move(2,3)
+      allow(game.towers[0]).to receive_messages(:empty? => true)
+      allow(game.towers[1]).to receive_messages(:empty? => true)
 
       expect(game.won?).to be true
     end
